@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+source /home/max/.zshenv
+source /home/max/.zshrc
+
+cd /home/max/Programming/quad > /dev/null
+
+source clean
+
+source meshGen
+
+source run

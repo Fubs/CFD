@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+source /home/max/.zshenv
+source /home/max/.zshrc
+cd /home/max/Programming/quad > /dev/null
+ofoam
+source clean
+
+# split mesh into 20 parts to run in parallel
+decomposePar -constant -force | tee log/log.decomposePar
+
+# optimize mesh
+mpiexec -oversubscribe -np 20 renumberMesh -overwrite -parallel | tee log/log.renumberMesh
+
+# run a solver
+mpiexec -oversubscribe -np 20 simpleFoam -parallel | tee log/log.simpleFoam
+#mpiexec -oversubscribe -np 20 icoFoam -parallel | tee log/log.icoFoam
+#mpiexec -oversubscribe -np 20 pimpleFoam -parallel | tee log/log.pimpleFoam
+
+# recombine mesh parts
+reconstructPar -constant | tee log/log.reconstructPar
+
+# display force coefficients for run
+cat postProcessing/forceCoeffs/0/forceCoeffs.dat
+
+

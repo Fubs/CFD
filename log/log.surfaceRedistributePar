@@ -1,0 +1,64 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-d1f453a9efe6
+Exec   : surfaceRedistributePar -parallel Quad.stl follow
+Date   : Nov 25 2020
+Time   : 19:42:47
+Host   : "max-pc"
+PID    : 74054
+I/O    : uncollated
+Case   : /home/max/Programming/quad
+nProcs : 20
+Slaves : 
+19
+(
+"max-pc.74055"
+"max-pc.74056"
+"max-pc.74057"
+"max-pc.74058"
+"max-pc.74059"
+"max-pc.74060"
+"max-pc.74061"
+"max-pc.74062"
+"max-pc.74063"
+"max-pc.74064"
+"max-pc.74065"
+"max-pc.74066"
+"max-pc.74067"
+"max-pc.74068"
+"max-pc.74069"
+"max-pc.74070"
+"max-pc.74071"
+"max-pc.74072"
+"max-pc.74073"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStamp (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surface from "Quad.stl"
+
+Using distribution method 0 follow
+
+Removing surface outside of mesh bounds.
+
+Create polyMesh for time = 0
+
+Loading undecomposed surface ""
+
+Writing dummy bounds dictionary to Quad.stlDict
+

@@ -1,0 +1,19 @@
+Procedure for Meshing and Running in Parallel with SnappyHexMesh
+
+1 Rename 0 folder 0.org This prevents SHMesh interfering with it
+2 <blockMesh> Creates background mesh for SHMesh
+3 <surfaceFeatureExtract> So the mesher knows where to snap to
+4 <decomposePar> Divides mesh into one section per CPU core
+5 <mpirun –np 8 snappyHexMesh –overwrite –parallel> Runs in parallel
+6 <reconstructParMesh –constant> Puts the mesh back together again
+7 delete all processor folders Clear old mesh data
+8 delete folder 0 This was a dummy folder for SHMesh
+9 rename folder 0.org to 0 Reactivate the folder for the solver to use
+
+10 edit the constant/polymesh/boundary file and remove all the references to patches created by blockMesh in Step2. Leave only the patches desired for the simulation to run. Edit the number at the top of the text file which shows how many patches are to be setup.
+
+11 <decomposePar> Puts the solution setup into a folder per CPU core
+12 <mpirun –n 8 renumberMesh –overwrite –parallel> Optimises mesh
+13 <mpirun –np 8 pisoFoam –parallel> Run the solver in parallel
+14 <reconstructPar> Puts the CPU results back together into one
+15 <paraFoam> Launches ParaVIEW to see the results

@@ -1,0 +1,177 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-d1f453a9efe6
+Exec   : pimpleFoam -parallel
+Date   : Nov 28 2020
+Time   : 04:22:38
+Host   : "max-pc"
+PID    : 23241
+I/O    : uncollated
+Case   : /home/max/Programming/quad
+nProcs : 20
+Slaves : 
+19
+(
+"max-pc.23242"
+"max-pc.23243"
+"max-pc.23244"
+"max-pc.23245"
+"max-pc.23246"
+"max-pc.23247"
+"max-pc.23248"
+"max-pc.23249"
+"max-pc.23250"
+"max-pc.23251"
+"max-pc.23252"
+"max-pc.23253"
+"max-pc.23254"
+"max-pc.23255"
+"max-pc.23256"
+"max-pc.23257"
+"max-pc.23258"
+"max-pc.23259"
+"max-pc.23260"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStamp (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: No corrector convergence criteria found
+        Calculations will do 2 corrections
+
+
+PIMPLE: Operating solver in steady-state mode with 2 outer correctors
+
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kEpsilon
+RAS
+{
+    model           kEpsilon;
+    turbulence      on;
+    printCoeffs     on;
+    Cmu             0.09;
+    C1              1.44;
+    C2              1.92;
+    C3              0;
+    sigmak          1;
+    sigmaEps        1.3;
+}
+
+No MRF models present
+
+No finite volume options present
+Courant Number mean: 0.0502557947 max: 14.1385016
+--> FOAM Warning : 
+    From function void Foam::timeControl::read(const Foam::dictionary&)
+    in file db/functionObjects/timeControl/timeControl.C at line 89
+    Reading "/home/max/Programming/quad/system/controlDict/functions/residuals" from line 103 to line 115
+    Using deprecated 'outputControl'
+    Please use 'writeControl' with 'writeInterval'
+
+Starting time loop
+
+Courant Number mean: 0.00355453471 max: 1
+deltaT = 7.0728853e-05
+Time = 7.0728853e-05
+
+PIMPLE: Iteration 1
+DILUPBiCG:  Solving for Ux, Initial residual = 1, Final residual = 2.15201824e-07, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 1, Final residual = 5.44230619e-07, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 1, Final residual = 4.33093582e-07, No Iterations 2
+DICPCG:  Solving for p, Initial residual = 1, Final residual = 9.64647943e-07, No Iterations 290
+DICPCG:  Solving for p, Initial residual = 0.125945079, Final residual = 9.60268718e-07, No Iterations 188
+DICPCG:  Solving for p, Initial residual = 0.0110426623, Final residual = 9.8279852e-07, No Iterations 137
+time step continuity errors : sum local = 2.73450192e-11, global = -3.94926611e-12, cumulative = -3.94926611e-12
+DICPCG:  Solving for p, Initial residual = 0.0922686797, Final residual = 9.65531094e-07, No Iterations 258
+DICPCG:  Solving for p, Initial residual = 0.060516615, Final residual = 9.81274759e-07, No Iterations 178
+DICPCG:  Solving for p, Initial residual = 0.00543890566, Final residual = 9.96586974e-07, No Iterations 125
+time step continuity errors : sum local = 2.74661428e-11, global = -3.94697464e-12, cumulative = -7.89624075e-12
+PIMPLE: Iteration 2
+DILUPBiCG:  Solving for Ux, Initial residual = 0.959530206, Final residual = 1.39728658e-07, No Iterations 7
+DILUPBiCG:  Solving for Uy, Initial residual = 0.960086175, Final residual = 1.15329667e-07, No Iterations 7
+DILUPBiCG:  Solving for Uz, Initial residual = 0.924326897, Final residual = 1.97922083e-07, No Iterations 7
+DICPCG:  Solving for p, Initial residual = 0.251746706, Final residual = 9.44684081e-07, No Iterations 268
+DICPCG:  Solving for p, Initial residual = 0.413782998, Final residual = 9.56161579e-07, No Iterations 205
+DICPCG:  Solving for p, Initial residual = 0.0324838073, Final residual = 9.6367714e-07, No Iterations 169
+time step continuity errors : sum local = 2.10061006e-10, global = 3.99668718e-12, cumulative = -3.89955357e-12
+DICPCG:  Solving for p, Initial residual = 0.133881048, Final residual = 9.51719435e-07, No Iterations 259
+DICPCG:  Solving for p, Initial residual = 0.209508774, Final residual = 9.79130881e-07, No Iterations 195
+DICPCG:  Solving for p, Initial residual = 0.0160922105, Final residual = 9.36499612e-07, No Iterations 160
+time step continuity errors : sum local = 1.08596421e-10, global = 3.50619851e-12, cumulative = -3.93355056e-13
+DILUPBiCG:  Solving for epsilon, Initial residual = 0.0175148296, Final residual = 4.71054891e-07, No Iterations 4
+bounding epsilon, min: -0.192942173 max: 535.358231 average: 0.714985901
+DILUPBiCG:  Solving for k, Initial residual = 1, Final residual = 7.12756666e-07, No Iterations 6
+ExecutionTime = 296.08 s  ClockTime = 297 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSolution from file "/home/max/Programming/quad/system/fvSolution"
+Courant Number mean: 0.00362062443 max: 0.901519733
+deltaT = 7.84551356e-05
+Time = 0.000149183989
+
+PIMPLE: Iteration 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0622432777, Final residual = 3.68739948e-07, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0657577626, Final residual = 5.79986169e-07, No Iterations 5
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0544729822, Final residual = 3.11991034e-07, No Iterations 5
+DICPCG:  Solving for p, Initial residual = 0.692693781, Final residual = 9.57929783e-07, No Iterations 405
+DICPCG:  Solving for p, Initial residual = 0.00725722669, Final residual = 9.85474564e-07, No Iterations 203
+DICPCG:  Solving for p, Initial residual = 0.000869390237, Final residual = 9.52782659e-07, No Iterations 158
+time step continuity errors : sum local = 1.18554443e-08, global = -3.77526914e-10, cumulative = -3.77920269e-10
+DICPCG:  Solving for p, Initial residual = 0.0552909704, Final residual = 9.87770354e-07, No Iterations 340
+DICPCG:  Solving for p, Initial residual = 0.00499462678, Final residual = 9.93172861e-07, No Iterations 193
+DICPCG:  Solving for p, Initial residual = 0.00060538985, Final residual = 9.57114308e-07, No Iterations 150
+time step continuity errors : sum local = 1.03723326e-08, global = -3.3668697e-10, cumulative = -7.14607239e-10
+PIMPLE: Iteration 2
+DILUPBiCG:  Solving for Ux, Initial residual = 0.217383307, Final residual = 1.92464142e-07, No Iterations 6
+DILUPBiCG:  Solving for Uy, Initial residual = 0.21840723, Final residual = 3.51183272e-07, No Iterations 6
+DILUPBiCG:  Solving for Uz, Initial residual = 0.101492425, Final residual = 1.48892189e-07, No Iterations 6
+DICPCG:  Solving for p, Initial residual = 0.0611150538, Final residual = 9.69918833e-07, No Iterations 221
+DICPCG:  Solving for p, Initial residual = 0.0114840414, Final residual = 9.81384245e-07, No Iterations 138
+DICPCG:  Solving for p, Initial residual = 0.00146559529, Final residual = 9.9094279e-07, No Iterations 97
+time step continuity errors : sum local = 3.67606666e-09, global = 1.10474078e-09, cumulative = 3.90133543e-10
+DICPCG:  Solving for p, Initial residual = 0.0363200083, Final residual = 9.57365505e-07, No Iterations 214
+DICPCG:  Solving for p, Initial residual = 0.00701463182, Final residual = 9.89053461e-07, No Iterations 120
+DICPCG:  Solving for p, Initial residual = 0.000891372366, Final residual = 9.70702357e-07, No Iterations 87
+time step continuity errors : sum local = 3.45732844e-09, global = 8.35681267e-10, cumulative = 1.22581481e-09
+DILUPBiCG:  Solving for epsilon, Initial residual = 0.0430725958, Final residual = 4.46297032e-07, No Iterations 5
+bounding epsilon, min: -102.829461 max: 14672.6205 average: 12.6817567
+DILUPBiCG:  Solving for k, Initial residual = 0.211455186, Final residual = 2.37545209e-07, No Iterations 6
+bounding k, min: -0.819320163 max: 22.5196857 average: 0.190485742
+ExecutionTime = 582.49 s  ClockTime = 585 s
+
+Courant Number mean: 0.00445800112 max: 26.9528664
+deltaT = 2.91082716e-06
+Time = 0.000152094816
+
+PIMPLE: Iteration 1
+DILUPBiCG:  Solving for Ux, Initial residual = 0.184371223, Final residual = 1.83694677e-07, No Iterations 5
+DILUPBiCG:  Solving for Uy, Initial residual = 0.187914123, Final residual = 4.29898038e-07, No Iterations 5
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0446381823, Final residual = 6.97322026e-07, No Iterations 4

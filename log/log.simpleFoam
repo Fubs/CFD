@@ -1,0 +1,599 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-d1f453a9efe6
+Exec   : simpleFoam -parallel
+Date   : Nov 28 2020
+Time   : 09:31:24
+Host   : "max-pc"
+PID    : 40182
+I/O    : uncollated
+Case   : /home/max/Programming/quad
+nProcs : 20
+Slaves : 
+19
+(
+"max-pc.40183"
+"max-pc.40184"
+"max-pc.40185"
+"max-pc.40186"
+"max-pc.40187"
+"max-pc.40188"
+"max-pc.40189"
+"max-pc.40190"
+"max-pc.40191"
+"max-pc.40192"
+"max-pc.40193"
+"max-pc.40194"
+"max-pc.40195"
+"max-pc.40196"
+"max-pc.40197"
+"max-pc.40198"
+"max-pc.40199"
+"max-pc.40200"
+"max-pc.40201"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStamp (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 0.0001
+        U: tolerance 0.0001
+        nuTilda: tolerance 0.0001
+        omega: tolerance 0.0001
+        k: tolerance 0.0001
+        epsilon: tolerance 0.0001
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model SpalartAllmaras
+Selecting patchDistMethod meshWave
+RAS
+{
+    model           SpalartAllmaras;
+    turbulence      on;
+    printCoeffs     on;
+    sigmaNut        0.66666;
+    kappa           0.41;
+    Cb1             0.1355;
+    Cb2             0.622;
+    Cw2             0.3;
+    Cw3             2;
+    Cv1             7.1;
+    Cs              0.3;
+}
+
+No MRF models present
+
+No finite volume options present
+
+Starting time loop
+
+Time = 0.001
+
+DILUPBiCG:  Solving for Ux, Initial residual = 1, Final residual = 0.00294496491, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 1, Final residual = 0.00340355544, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 1, Final residual = 0.00322107361, No Iterations 2
+DICPCG:  Solving for p, Initial residual = 1, Final residual = 0.00959011824, No Iterations 167
+DICPCG:  Solving for p, Initial residual = 0.150368757, Final residual = 0.00146969547, No Iterations 30
+DICPCG:  Solving for p, Initial residual = 0.0113460308, Final residual = 0.000109700968, No Iterations 96
+time step continuity errors : sum local = 3.64437126e-08, global = -3.30131184e-09, cumulative = -3.30131184e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.999999997, Final residual = 0.00216195828, No Iterations 2
+ExecutionTime = 48.48 s  ClockTime = 49 s
+
+Time = 0.002
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.304528238, Final residual = 0.00042786534, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.307597825, Final residual = 0.000375015006, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0471989368, Final residual = 0.000120688037, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.213308505, Final residual = 0.00212220374, No Iterations 163
+DICPCG:  Solving for p, Initial residual = 0.122329937, Final residual = 0.00121417442, No Iterations 38
+DICPCG:  Solving for p, Initial residual = 0.00862919517, Final residual = 8.61645926e-05, No Iterations 100
+time step continuity errors : sum local = 1.32362614e-08, global = -2.92285258e-10, cumulative = -3.5935971e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.014552774, Final residual = 3.8857437e-05, No Iterations 2
+ExecutionTime = 93.33 s  ClockTime = 93 s
+
+Time = 0.003
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.221087561, Final residual = 0.000298308351, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.225791217, Final residual = 0.000266170545, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0293651296, Final residual = 5.05221842e-05, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.303603177, Final residual = 0.00294007827, No Iterations 95
+DICPCG:  Solving for p, Initial residual = 0.0295566595, Final residual = 0.000281462985, No Iterations 68
+DICPCG:  Solving for p, Initial residual = 0.00265195847, Final residual = 2.60135149e-05, No Iterations 101
+time step continuity errors : sum local = 9.21847049e-09, global = -2.49276462e-10, cumulative = -3.84287356e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00805744165, Final residual = 2.59620718e-05, No Iterations 2
+ExecutionTime = 134.2 s  ClockTime = 134 s
+
+Time = 0.004
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.148411995, Final residual = 0.000184849934, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.150526466, Final residual = 0.00017195288, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0183442392, Final residual = 2.40703726e-05, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.397740903, Final residual = 0.00372246489, No Iterations 158
+DICPCG:  Solving for p, Initial residual = 0.0327060472, Final residual = 0.000320831788, No Iterations 34
+DICPCG:  Solving for p, Initial residual = 0.00285502049, Final residual = 2.73626466e-05, No Iterations 105
+time step continuity errors : sum local = 1.82258336e-08, global = -2.92332054e-10, cumulative = -4.13520561e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00604904948, Final residual = 2.31896259e-05, No Iterations 2
+ExecutionTime = 179.25 s  ClockTime = 180 s
+
+Time = 0.005
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.088626596, Final residual = 0.000100543989, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0874716925, Final residual = 9.63857977e-05, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.0102884227, Final residual = 8.10887967e-06, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.182644184, Final residual = 0.00173995177, No Iterations 161
+DICPCG:  Solving for p, Initial residual = 0.0280375851, Final residual = 0.000277023474, No Iterations 35
+DICPCG:  Solving for p, Initial residual = 0.00239059615, Final residual = 2.24767964e-05, No Iterations 106
+time step continuity errors : sum local = 1.98959686e-08, global = -1.00241373e-10, cumulative = -4.23544699e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00498916943, Final residual = 2.23173233e-05, No Iterations 2
+ExecutionTime = 224.49 s  ClockTime = 225 s
+
+Time = 0.006
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0409008229, Final residual = 0.000249537412, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0358108487, Final residual = 3.54243186e-05, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00418549796, Final residual = 3.25082433e-05, No Iterations 2
+DICPCG:  Solving for p, Initial residual = 0.0872183903, Final residual = 0.000804804277, No Iterations 163
+DICPCG:  Solving for p, Initial residual = 0.0222103461, Final residual = 0.000218321089, No Iterations 36
+DICPCG:  Solving for p, Initial residual = 0.0018855337, Final residual = 1.81942085e-05, No Iterations 105
+time step continuity errors : sum local = 1.6280787e-08, global = 5.96560947e-11, cumulative = -4.17579089e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00428839873, Final residual = 2.15600726e-05, No Iterations 2
+ExecutionTime = 271.2 s  ClockTime = 272 s
+
+Time = 0.007
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0233280328, Final residual = 3.72146008e-05, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0242499691, Final residual = 2.93371974e-05, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00271218681, Final residual = 7.99180652e-06, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.0486748382, Final residual = 0.000468917999, No Iterations 160
+DICPCG:  Solving for p, Initial residual = 0.015548828, Final residual = 0.00015085102, No Iterations 37
+DICPCG:  Solving for p, Initial residual = 0.00132091517, Final residual = 1.29661142e-05, No Iterations 104
+time step continuity errors : sum local = 9.28908722e-09, global = -1.28816224e-10, cumulative = -4.30460711e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00378818927, Final residual = 2.12129089e-05, No Iterations 2
+ExecutionTime = 316.33 s  ClockTime = 317 s
+
+Time = 0.008
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0489365974, Final residual = 9.81876848e-05, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0561991724, Final residual = 7.21151331e-05, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00546126942, Final residual = 1.23244689e-05, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.0425767588, Final residual = 0.000425166414, No Iterations 109
+DICPCG:  Solving for p, Initial residual = 0.010658093, Final residual = 9.72870779e-05, No Iterations 74
+DICPCG:  Solving for p, Initial residual = 0.00085859507, Final residual = 8.11699434e-06, No Iterations 51
+time step continuity errors : sum local = 3.65457021e-09, global = 9.28107688e-10, cumulative = -3.37649943e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00341974086, Final residual = 2.17154378e-05, No Iterations 2
+ExecutionTime = 354 s  ClockTime = 355 s
+
+Time = 0.009
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.061080135, Final residual = 0.000135820045, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0703754921, Final residual = 9.25527336e-05, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00642417526, Final residual = 1.36812605e-05, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.0560016109, Final residual = 0.000550165554, No Iterations 125
+DICPCG:  Solving for p, Initial residual = 0.0308996015, Final residual = 0.00030820741, No Iterations 83
+DICPCG:  Solving for p, Initial residual = 0.00277142782, Final residual = 2.71178364e-05, No Iterations 100
+time step continuity errors : sum local = 5.47325041e-09, global = -3.9196258e-10, cumulative = -3.76846201e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00317652213, Final residual = 2.42963733e-05, No Iterations 2
+ExecutionTime = 399.77 s  ClockTime = 401 s
+
+Time = 0.01
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0537597245, Final residual = 0.000251912817, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0604940396, Final residual = 8.51651145e-05, No Iterations 3
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00532834395, Final residual = 1.23129831e-05, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.07293834, Final residual = 0.000718897084, No Iterations 154
+DICPCG:  Solving for p, Initial residual = 0.141513718, Final residual = 0.00138635221, No Iterations 38
+DICPCG:  Solving for p, Initial residual = 0.0103473265, Final residual = 0.000102845084, No Iterations 98
+time step continuity errors : sum local = 7.2551736e-09, global = -2.49386211e-11, cumulative = -3.79340063e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00302461616, Final residual = 2.77397895e-05, No Iterations 2
+ExecutionTime = 444.55 s  ClockTime = 446 s
+
+Time = 0.011
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0344551205, Final residual = 0.000294992339, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0351058304, Final residual = 5.75897958e-06, No Iterations 4
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00307411239, Final residual = 2.13171647e-05, No Iterations 2
+DICPCG:  Solving for p, Initial residual = 0.0855536269, Final residual = 0.000819017154, No Iterations 157
+DICPCG:  Solving for p, Initial residual = 0.0815134674, Final residual = 0.000805905921, No Iterations 37
+DICPCG:  Solving for p, Initial residual = 0.00606860217, Final residual = 5.80913614e-05, No Iterations 106
+time step continuity errors : sum local = 6.49260166e-09, global = 2.42120469e-10, cumulative = -3.55128016e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00294570492, Final residual = 2.7690226e-05, No Iterations 2
+ExecutionTime = 490.63 s  ClockTime = 492 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSchemes from file "/home/max/Programming/quad/system/fvSchemes"
+Time = 0.012
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0129416993, Final residual = 4.32847288e-05, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0110791821, Final residual = 5.76146457e-05, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.000980424533, Final residual = 5.7694622e-06, No Iterations 2
+DICPCG:  Solving for p, Initial residual = 0.0258658967, Final residual = 0.000257455001, No Iterations 158
+DICPCG:  Solving for p, Initial residual = 0.00741284972, Final residual = 7.30683474e-05, No Iterations 48
+DICPCG:  Solving for p, Initial residual = 0.000529584827, Final residual = 4.97016312e-06, No Iterations 100
+time step continuity errors : sum local = 4.15904495e-09, global = 1.42503754e-10, cumulative = -3.4087764e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.0028851098, Final residual = 2.30037127e-05, No Iterations 2
+ExecutionTime = 534.34 s  ClockTime = 536 s
+
+Time = 0.013
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0220614156, Final residual = 0.000110253031, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0226217671, Final residual = 8.96633345e-05, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00198681595, Final residual = 6.90989556e-06, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.0843122316, Final residual = 0.00083515774, No Iterations 122
+DICPCG:  Solving for p, Initial residual = 0.0584807029, Final residual = 0.000566897158, No Iterations 84
+DICPCG:  Solving for p, Initial residual = 0.00265644382, Final residual = 2.53556142e-05, No Iterations 60
+time step continuity errors : sum local = 2.21310511e-09, global = -5.90059506e-10, cumulative = -3.99883591e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00286400514, Final residual = 2.20235928e-05, No Iterations 2
+ExecutionTime = 574.4 s  ClockTime = 576 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSchemes from file "/home/max/Programming/quad/system/fvSchemes"
+Time = 0.014
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0265849377, Final residual = 5.50035192e-05, No Iterations 3
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0279257558, Final residual = 0.000152327981, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00251205746, Final residual = 6.70027812e-07, No Iterations 4
+DICPCG:  Solving for p, Initial residual = 0.107956463, Final residual = 0.00106594554, No Iterations 88
+DICPCG:  Solving for p, Initial residual = 0.00382443341, Final residual = 3.80363431e-05, No Iterations 62
+DICPCG:  Solving for p, Initial residual = 0.000299356507, Final residual = 2.94555915e-06, No Iterations 95
+time step continuity errors : sum local = 1.60647253e-09, global = 1.86704881e-10, cumulative = -3.81213103e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00287334788, Final residual = 2.14321813e-05, No Iterations 2
+ExecutionTime = 612.48 s  ClockTime = 615 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSolution from file "/home/max/Programming/quad/system/fvSolution"
+Time = 0.015
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.024444057, Final residual = 0.000116126674, No Iterations 2
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0249092021, Final residual = 0.000147655685, No Iterations 2
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00231349491, Final residual = 1.73625209e-05, No Iterations 2
+DICPCG:  Solving for p, Initial residual = 0.051678277, Final residual = 0.000503562757, No Iterations 118
+DICPCG:  Solving for p, Initial residual = 0.0022408714, Final residual = 2.16837675e-05, No Iterations 85
+DICPCG:  Solving for p, Initial residual = 0.000168922524, Final residual = 1.67372241e-06, No Iterations 70
+time step continuity errors : sum local = 2.44314864e-09, global = 4.6898944e-10, cumulative = -3.34314159e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00290169608, Final residual = 2.18323292e-05, No Iterations 2
+ExecutionTime = 652.99 s  ClockTime = 655 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSolution from file "/home/max/Programming/quad/system/fvSolution"
+Time = 0.016
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0186696317, Final residual = 2.11613411e-09, No Iterations 9
+DILUPBiCG:  Solving for Uy, Initial residual = 0.017555753, Final residual = 4.68368332e-09, No Iterations 9
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00171024837, Final residual = 8.22991187e-09, No Iterations 7
+DICPCG:  Solving for p, Initial residual = 0.0298097032, Final residual = 9.79654384e-08, No Iterations 291
+DICPCG:  Solving for p, Initial residual = 0.00185126522, Final residual = 9.55272718e-08, No Iterations 201
+DICPCG:  Solving for p, Initial residual = 0.000125390493, Final residual = 9.79312747e-08, No Iterations 111
+time step continuity errors : sum local = 1.75237379e-10, global = 4.48911019e-11, cumulative = -3.29825049e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00293948271, Final residual = 1.54407518e-09, No Iterations 7
+ExecutionTime = 736.08 s  ClockTime = 739 s
+
+Time = 0.017
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0129150061, Final residual = 9.73442661e-09, No Iterations 8
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0104083564, Final residual = 2.16709455e-09, No Iterations 9
+DILUPBiCG:  Solving for Uz, Initial residual = 0.00106632123, Final residual = 1.56149355e-09, No Iterations 7
+DICPCG:  Solving for p, Initial residual = 0.0252837433, Final residual = 9.72523393e-08, No Iterations 291
+DICPCG:  Solving for p, Initial residual = 0.00203790345, Final residual = 9.31439458e-08, No Iterations 205
+DICPCG:  Solving for p, Initial residual = 0.000139738008, Final residual = 9.76559532e-08, No Iterations 115
+time step continuity errors : sum local = 1.28725429e-10, global = 3.5317204e-11, cumulative = -3.26293328e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00299067518, Final residual = 1.57488979e-09, No Iterations 7
+ExecutionTime = 818.99 s  ClockTime = 822 s
+
+Time = 0.018
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.010050425, Final residual = 2.48870941e-09, No Iterations 9
+DILUPBiCG:  Solving for Uy, Initial residual = 0.00842492571, Final residual = 2.05837303e-09, No Iterations 9
+DILUPBiCG:  Solving for Uz, Initial residual = 0.000760222151, Final residual = 1.50288615e-09, No Iterations 7
+DICPCG:  Solving for p, Initial residual = 0.0151493568, Final residual = 9.63127212e-08, No Iterations 266
+DICPCG:  Solving for p, Initial residual = 0.00113074293, Final residual = 9.73260963e-08, No Iterations 195
+DICPCG:  Solving for p, Initial residual = 7.86659417e-05, Final residual = 9.75484828e-08, No Iterations 101
+time step continuity errors : sum local = 1.43654613e-10, global = 2.75532735e-11, cumulative = -3.23538001e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.00305917684, Final residual = 1.7149131e-09, No Iterations 7
+ExecutionTime = 897.22 s  ClockTime = 901 s
+
+Time = 0.019
+
+DILUPBiCG:  Solving for Ux, Initial residual = 0.0108983836, Final residual = 4.06741414e-09, No Iterations 9
+DILUPBiCG:  Solving for Uy, Initial residual = 0.0105507647, Final residual = 9.13025725e-09, No Iterations 8
+DILUPBiCG:  Solving for Uz, Initial residual = 0.000840516309, Final residual = 8.02870684e-09, No Iterations 6
+DICPCG:  Solving for p, Initial residual = 0.0132451552, Final residual = 9.39524872e-08, No Iterations 248
+DICPCG:  Solving for p, Initial residual = 0.000819867788, Final residual = 9.99037403e-08, No Iterations 151
+DICPCG:  Solving for p, Initial residual = 5.7682985e-05, Final residual = 9.85892379e-08, No Iterations 63
+time step continuity errors : sum local = 1.19648333e-10, global = 1.69894011e-11, cumulative = -3.21839061e-09
+DILUPBiCG:  Solving for nuTilda, Initial residual = 0.0031413163, Final residual = 3.20226009e-10, No Iterations 8
+ExecutionTime = 963.18 s  ClockTime = 967 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSolution from file "/home/max/Programming/quad/system/fvSolution"
+Time = 0.02
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0114896576, Final residual = 4.20321072e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.011356455, Final residual = 3.71659659e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000867214645, Final residual = 9.4314648e-09, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.0113327299, Final residual = 9.82640051e-09, No Iterations 298
+DICPCG:  Solving for p, Initial residual = 0.00105821074, Final residual = 9.35638845e-09, No Iterations 225
+DICPCG:  Solving for p, Initial residual = 7.166303e-05, Final residual = 9.75642898e-09, No Iterations 180
+time step continuity errors : sum local = 1.10929463e-11, global = -5.62832931e-13, cumulative = -3.21895344e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00323713061, Final residual = 4.11399145e-09, No Iterations 3
+ExecutionTime = 1052.37 s  ClockTime = 1057 s
+
+Time = 0.021
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0110349034, Final residual = 3.56443675e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0104013723, Final residual = 3.34930226e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000781132701, Final residual = 9.79607881e-09, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.01751258, Final residual = 9.83684607e-09, No Iterations 316
+DICPCG:  Solving for p, Initial residual = 0.00224855323, Final residual = 9.40298979e-09, No Iterations 240
+DICPCG:  Solving for p, Initial residual = 0.000153021026, Final residual = 9.61400432e-09, No Iterations 204
+time step continuity errors : sum local = 6.18709153e-12, global = 1.08285013e-15, cumulative = -3.21895236e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00334719653, Final residual = 4.2838423e-09, No Iterations 3
+ExecutionTime = 1148.73 s  ClockTime = 1154 s
+
+Time = 0.022
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0104777921, Final residual = 1.00070032e-09, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00919255857, Final residual = 6.12086024e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000708271305, Final residual = 8.85682413e-09, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.0220273068, Final residual = 9.97829247e-09, No Iterations 320
+DICPCG:  Solving for p, Initial residual = 0.00268913429, Final residual = 9.55910121e-09, No Iterations 241
+DICPCG:  Solving for p, Initial residual = 0.00018688595, Final residual = 9.94644107e-09, No Iterations 205
+time step continuity errors : sum local = 5.0469156e-12, global = 1.88107863e-14, cumulative = -3.21893355e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00347276013, Final residual = 4.49426598e-09, No Iterations 3
+ExecutionTime = 1245.01 s  ClockTime = 1251 s
+
+Time = 0.023
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0107589564, Final residual = 2.92233855e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00901961255, Final residual = 3.83362584e-09, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000737342354, Final residual = 7.02895009e-09, No Iterations 3
+DICPCG:  Solving for p, Initial residual = 0.025948059, Final residual = 9.74793754e-09, No Iterations 321
+DICPCG:  Solving for p, Initial residual = 0.00219320991, Final residual = 9.70888486e-09, No Iterations 235
+DICPCG:  Solving for p, Initial residual = 0.000154333929, Final residual = 9.87412866e-09, No Iterations 201
+time step continuity errors : sum local = 4.81628392e-12, global = -9.99590527e-15, cumulative = -3.21894354e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00361703729, Final residual = 4.74206726e-09, No Iterations 3
+ExecutionTime = 1339.12 s  ClockTime = 1346 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSolution from file "/home/max/Programming/quad/system/fvSolution"
+Time = 0.024
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0114297832, Final residual = 3.06325003e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00963713717, Final residual = 3.01483244e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000820622403, Final residual = 7.72046051e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.029250513, Final residual = 9.88478153e-09, No Iterations 305
+FDICPCG:  Solving for p, Initial residual = 0.00147999679, Final residual = 9.67724669e-09, No Iterations 219
+FDICPCG:  Solving for p, Initial residual = 0.00010726462, Final residual = 9.95472225e-09, No Iterations 182
+time step continuity errors : sum local = 5.22650827e-12, global = -2.98842728e-14, cumulative = -3.21897343e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00378018382, Final residual = 5.09887087e-09, No Iterations 3
+ExecutionTime = 1424.06 s  ClockTime = 1431 s
+
+Time = 0.025
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.011728248, Final residual = 9.28251873e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0099990496, Final residual = 8.82794261e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000866739051, Final residual = 7.97983034e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0262520588, Final residual = 9.74113256e-09, No Iterations 299
+FDICPCG:  Solving for p, Initial residual = 0.0010455967, Final residual = 9.87673961e-09, No Iterations 161
+FDICPCG:  Solving for p, Initial residual = 7.52043999e-05, Final residual = 9.75399766e-09, No Iterations 136
+time step continuity errors : sum local = 6.81656996e-12, global = -9.15447159e-13, cumulative = -3.21988888e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00396057821, Final residual = 5.62463087e-09, No Iterations 3
+ExecutionTime = 1497.84 s  ClockTime = 1505 s
+
+Time = 0.026
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0115468739, Final residual = 4.0780327e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00975068839, Final residual = 6.87661813e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000852221282, Final residual = 8.86409632e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0282051737, Final residual = 9.79770154e-09, No Iterations 300
+FDICPCG:  Solving for p, Initial residual = 0.0011282959, Final residual = 9.55839486e-09, No Iterations 219
+FDICPCG:  Solving for p, Initial residual = 8.09781439e-05, Final residual = 9.94426417e-09, No Iterations 130
+time step continuity errors : sum local = 7.06395206e-12, global = 1.64634458e-13, cumulative = -3.21972424e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00416165063, Final residual = 6.42979965e-09, No Iterations 3
+ExecutionTime = 1579.47 s  ClockTime = 1587 s
+
+Time = 0.027
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0111067669, Final residual = 3.21713129e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00920859559, Final residual = 9.53116396e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000800006433, Final residual = 9.02792759e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0260471605, Final residual = 9.59082569e-09, No Iterations 302
+FDICPCG:  Solving for p, Initial residual = 0.00104866331, Final residual = 9.49855352e-09, No Iterations 222
+FDICPCG:  Solving for p, Initial residual = 7.63982799e-05, Final residual = 9.73261997e-09, No Iterations 133
+time step continuity errors : sum local = 7.51810626e-12, global = 7.40746801e-13, cumulative = -3.21898349e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00438455798, Final residual = 6.97142436e-09, No Iterations 3
+ExecutionTime = 1661.66 s  ClockTime = 1670 s
+
+Time = 0.028
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.010627149, Final residual = 3.73302425e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0087286683, Final residual = 5.30367068e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000744737825, Final residual = 8.96840085e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0237143231, Final residual = 9.91470501e-09, No Iterations 289
+FDICPCG:  Solving for p, Initial residual = 0.00090661886, Final residual = 9.21758225e-09, No Iterations 217
+FDICPCG:  Solving for p, Initial residual = 6.71834562e-05, Final residual = 9.51406539e-09, No Iterations 128
+time step continuity errors : sum local = 7.73303798e-12, global = 1.52714841e-13, cumulative = -3.21883078e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00463054029, Final residual = 7.35121692e-09, No Iterations 3
+ExecutionTime = 1739.18 s  ClockTime = 1748 s
+
+Time = 0.029
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0103579906, Final residual = 3.64667958e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00854673111, Final residual = 9.42122927e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000705548841, Final residual = 8.59863592e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0244373153, Final residual = 9.89390826e-09, No Iterations 284
+FDICPCG:  Solving for p, Initial residual = 0.000884088061, Final residual = 9.17228109e-09, No Iterations 212
+FDICPCG:  Solving for p, Initial residual = 6.72969223e-05, Final residual = 9.99561747e-09, No Iterations 122
+time step continuity errors : sum local = 7.34847365e-12, global = -1.10448327e-12, cumulative = -3.21993526e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.0049057781, Final residual = 7.83263882e-09, No Iterations 3
+ExecutionTime = 1815.07 s  ClockTime = 1824 s
+
+Time = 0.03
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0102700716, Final residual = 3.40980907e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.0085557334, Final residual = 9.46687693e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000687377467, Final residual = 8.89649222e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0240420528, Final residual = 9.56393655e-09, No Iterations 279
+FDICPCG:  Solving for p, Initial residual = 0.000853946991, Final residual = 9.89621839e-09, No Iterations 191
+FDICPCG:  Solving for p, Initial residual = 6.52810522e-05, Final residual = 9.76357358e-09, No Iterations 150
+time step continuity errors : sum local = 6.89603881e-12, global = -5.65521759e-13, cumulative = -3.22050078e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00520662455, Final residual = 8.42067827e-09, No Iterations 3
+ExecutionTime = 1891.1 s  ClockTime = 1901 s
+
+Time = 0.031
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0103206612, Final residual = 3.35631616e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00862182531, Final residual = 9.12736361e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000682517453, Final residual = 7.56522285e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0262302698, Final residual = 9.66611763e-09, No Iterations 294
+FDICPCG:  Solving for p, Initial residual = 0.000982955065, Final residual = 9.5745343e-09, No Iterations 214
+FDICPCG:  Solving for p, Initial residual = 7.54102477e-05, Final residual = 9.6152737e-09, No Iterations 152
+time step continuity errors : sum local = 6.01989689e-12, global = -4.63367579e-13, cumulative = -3.22096415e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.005541272, Final residual = 9.12728864e-09, No Iterations 3
+ExecutionTime = 1972.86 s  ClockTime = 1983 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSolution from file "/home/max/Programming/quad/system/fvSolution"
+Time = 0.032
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0104228246, Final residual = 3.17965428e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00869246435, Final residual = 9.55353243e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000685254335, Final residual = 1.68007211e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0253666329, Final residual = 9.75610341e-09, No Iterations 297
+FDICPCG:  Solving for p, Initial residual = 0.000964700108, Final residual = 9.8213068e-09, No Iterations 216
+FDICPCG:  Solving for p, Initial residual = 7.40218814e-05, Final residual = 9.70838013e-09, No Iterations 157
+time step continuity errors : sum local = 6.28930226e-12, global = -3.54217988e-13, cumulative = -3.22131837e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00591360777, Final residual = 9.72924763e-09, No Iterations 3
+ExecutionTime = 2054.13 s  ClockTime = 2064 s
+
+Time = 0.033
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0105414293, Final residual = 2.79965328e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00878315561, Final residual = 8.65420487e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000690333092, Final residual = 7.30559704e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.034629758, Final residual = 9.873028e-09, No Iterations 295
+FDICPCG:  Solving for p, Initial residual = 0.00133549987, Final residual = 9.72525218e-09, No Iterations 219
+FDICPCG:  Solving for p, Initial residual = 0.000101938227, Final residual = 9.87596809e-09, No Iterations 165
+time step continuity errors : sum local = 5.1792383e-12, global = -1.22587288e-13, cumulative = -3.22144096e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00632473399, Final residual = 1.1562954e-09, No Iterations 4
+ExecutionTime = 2136.4 s  ClockTime = 2147 s
+
+regIOobject::readIfModified() : 
+    Re-reading object controlDict from file "/home/max/Programming/quad/system/controlDict"
+Time = 0.034
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0106261221, Final residual = 4.35118811e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00886559926, Final residual = 7.81971169e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000698965734, Final residual = 7.1774326e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0365794265, Final residual = 9.89226257e-09, No Iterations 297
+FDICPCG:  Solving for p, Initial residual = 0.00137644422, Final residual = 9.29283452e-09, No Iterations 220
+FDICPCG:  Solving for p, Initial residual = 0.000104384915, Final residual = 9.98146693e-09, No Iterations 164
+time step continuity errors : sum local = 5.38275735e-12, global = -1.38571472e-13, cumulative = -3.22157953e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.0067741131, Final residual = 1.30128407e-09, No Iterations 4
+ExecutionTime = 2218.85 s  ClockTime = 2230 s
+
+Time = 0.035
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.010742589, Final residual = 1.70642242e-09, No Iterations 5
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00891347212, Final residual = 3.04848928e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000706993758, Final residual = 9.48391827e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0392603627, Final residual = 9.8010438e-09, No Iterations 288
+FDICPCG:  Solving for p, Initial residual = 0.00145010352, Final residual = 9.50714801e-09, No Iterations 218
+FDICPCG:  Solving for p, Initial residual = 0.000109792013, Final residual = 9.73538274e-09, No Iterations 157
+time step continuity errors : sum local = 5.28880781e-12, global = -2.82387783e-13, cumulative = -3.22186192e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00727701631, Final residual = 1.41824476e-09, No Iterations 4
+ExecutionTime = 2299.79 s  ClockTime = 2311 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSolution from file "/home/max/Programming/quad/system/fvSolution"
+Time = 0.036
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0108493294, Final residual = 2.85840302e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00902909993, Final residual = 9.49011043e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000716215743, Final residual = 6.98353967e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0426905018, Final residual = 9.76937395e-09, No Iterations 293
+FDICPCG:  Solving for p, Initial residual = 0.00146699101, Final residual = 9.25126593e-09, No Iterations 218
+FDICPCG:  Solving for p, Initial residual = 0.00011067016, Final residual = 9.56602856e-09, No Iterations 152
+time step continuity errors : sum local = 5.05380775e-12, global = -4.40616051e-13, cumulative = -3.22230253e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00781526854, Final residual = 1.39658714e-09, No Iterations 4
+ExecutionTime = 2383.44 s  ClockTime = 2395 s
+
+Time = 0.037
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0109698815, Final residual = 2.68689132e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00914281115, Final residual = 5.57431802e-10, No Iterations 5
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000727644606, Final residual = 7.12294905e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0370594786, Final residual = 9.9218357e-09, No Iterations 282
+FDICPCG:  Solving for p, Initial residual = 0.00116497255, Final residual = 9.78897781e-09, No Iterations 206
+FDICPCG:  Solving for p, Initial residual = 8.9052024e-05, Final residual = 9.72678222e-09, No Iterations 118
+time step continuity errors : sum local = 5.63565532e-12, global = -1.66411939e-12, cumulative = -3.22396665e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00842977449, Final residual = 1.30522957e-09, No Iterations 4
+ExecutionTime = 2458.58 s  ClockTime = 2471 s
+
+Time = 0.038
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0110836217, Final residual = 4.93358597e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00925837087, Final residual = 2.54735569e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000731871065, Final residual = 7.14399813e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0355111194, Final residual = 9.61477306e-09, No Iterations 270
+FDICPCG:  Solving for p, Initial residual = 0.00102124526, Final residual = 9.61192161e-09, No Iterations 172
+FDICPCG:  Solving for p, Initial residual = 7.98240182e-05, Final residual = 9.69443004e-09, No Iterations 111
+time step continuity errors : sum local = 5.69713953e-12, global = -5.01515222e-13, cumulative = -3.22446817e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00912332347, Final residual = 1.43122977e-09, No Iterations 4
+ExecutionTime = 2528.65 s  ClockTime = 2541 s
+
+Time = 0.039
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0111158951, Final residual = 6.09193034e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00927169878, Final residual = 7.39042177e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000729876543, Final residual = 7.94090828e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0380987653, Final residual = 9.88976122e-09, No Iterations 268
+FDICPCG:  Solving for p, Initial residual = 0.00106767707, Final residual = 9.39718842e-09, No Iterations 192
+FDICPCG:  Solving for p, Initial residual = 8.48829562e-05, Final residual = 9.80562717e-09, No Iterations 112
+time step continuity errors : sum local = 5.28135073e-12, global = 5.84372929e-15, cumulative = -3.22446232e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.00988629288, Final residual = 1.69414416e-09, No Iterations 4
+ExecutionTime = 2601.06 s  ClockTime = 2614 s
+
+Time = 0.04
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0110792689, Final residual = 3.36144484e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00922840677, Final residual = 6.91290798e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000723049933, Final residual = 9.57199515e-09, No Iterations 3
+FDICPCG:  Solving for p, Initial residual = 0.0343956361, Final residual = 9.46003784e-09, No Iterations 263
+FDICPCG:  Solving for p, Initial residual = 0.000944647572, Final residual = 9.57953295e-09, No Iterations 190
+FDICPCG:  Solving for p, Initial residual = 7.54559646e-05, Final residual = 9.79557588e-09, No Iterations 108
+time step continuity errors : sum local = 5.85937712e-12, global = -2.97529714e-13, cumulative = -3.22475985e-09
+DILUPBiCGStab:  Solving for nuTilda, Initial residual = 0.0107494322, Final residual = 2.12274206e-09, No Iterations 4
+ExecutionTime = 2671.62 s  ClockTime = 2685 s
+
+regIOobject::readIfModified() : 
+    Re-reading object fvSolution from file "/home/max/Programming/quad/system/fvSolution"
+Time = 0.041
+
+DILUPBiCGStab:  Solving for Ux, Initial residual = 0.0110179923, Final residual = 2.91329195e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uy, Initial residual = 0.00919315952, Final residual = 2.70910584e-09, No Iterations 4
+DILUPBiCGStab:  Solving for Uz, Initial residual = 0.000715789034, Final residual = 7.13490812e-09, No Iterations 3

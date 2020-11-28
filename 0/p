@@ -1,0 +1,43 @@
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    quad
+    {
+        type zeroGradient;
+    }
+
+    "(front|back|left|right)"
+    {
+        type slip;
+    }
+
+    top
+    {
+        type freestreamPressure;
+        freestreamValue $internalField;
+    }
+
+    bottom
+    {
+        type freestreamPressure;
+        freestreamValue $internalField;
+    }
+
+
+    "proc.*"
+    {
+        type processor;
+    }
+}
+

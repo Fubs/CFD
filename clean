@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+source /home/max/.zshenv
+source /home/max/.zshrc
+
+cd /home/max/Programming/quad > /dev/null
+
+
+LC_ALL=C find /home/max/Programming/quad/ -maxdepth 1 !  -name '*[!0-9]' -type d -exec rm -rf {} + > /dev/null
+
+cp -r inits 0
+
+ls

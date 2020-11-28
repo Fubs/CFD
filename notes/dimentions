@@ -1,0 +1,9 @@
+
+
+dimensions     [0 0 0 0 0 0 0]
+corresponds to [kg m s K mol A cd]
+
+so for velocity
+dimensions     [0 1 -1 0 0 0 0]
+
+

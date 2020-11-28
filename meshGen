@@ -1,0 +1,46 @@
+#!/bin/zsh
+
+# setup env
+source /home/max/.zshenv
+source /home/max/.zshrc
+cd /home/max/Programming/quad > /dev/null
+ofoam
+
+# clean directory
+source clean
+foamCleanPolyMesh
+rm constant/triSurface/Quad*
+
+# generate bounding box mesh
+blockMesh | tee log/log.blockMesh
+
+# scales up STL and bounding box from cm to m. Helps snappyHexMesh evaluate cell quality
+cp old/QuadV6.stl constant/triSurface/QuadTemp.stl
+transformPoints -scale '(100 100 100)'
+surfaceConvert -scale 100 constant/triSurface/QuadTemp.stl constant/triSurface/Quad.stl
+
+# detect surface features, stores as Fairing.eMesh in constant/triSurface/
+surfaceFeatures
+
+# split mesh into 20 parts to run in parallel
+decomposePar -constant -force | tee log/log.decomposePar
+
+# optimize mesh data structure
+mpiexec -oversubscribe -np 20 renumberMesh -overwrite -parallel | tee log/log.renumberMesh
+
+# generate hexmesh from STL file and bounding box
+mpiexec -oversubscribe -np 20 snappyHexMesh -overwrite -parallel | tee log/log.snappyHexMesh
+
+# check for bad cells
+mpiexec -oversubscribe -np 20 checkMesh -allGeometry -allTopology -parallel | tee log/log.checkMesh
+
+# recombine 20 parts into one mesh
+reconstructParMesh -constant -fullMatch | tee log/log.reconstructParMesh
+
+
+# rescale STL and generated mesh back to desired units of cm
+mv constant/triSurface/Quad.stl constant/triSurface/QuadTemp.stl
+transformPoints -scale '(0.01 0.01 0.01)'
+surfaceConvert -scale 0.01 constant/triSurface/QuadTemp.stl constant/triSurface/Quad.stl
+
+
